@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://static.vecteezy.com/system/resources/previews/008/361/513/non_2x/simple-yellow-flowers-petals-seamless-repeatable-pattern-summer-background-repeated-light-background-soft-textile-texture-bright-abstract-nature-wallpaper-vector.jpg'); /* URL de la imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px; /* Limitar el ancho del contenedor */
+      margin: 0 20px; /* Espaciado lateral para móviles */
+    }
+
+    h1 {
+      color: #FFD700;
+      font-size: 2rem;
+    }
+
+    .flower-image {
+      width: 200px;
+      height: 200px;
+    }
+
+    .message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #444;
+      text-align: justify; /* Justifica el texto */
+      line-height: 1.6; /* Mejora la legibilidad del texto */
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #FFD700;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background-color: #FFC107;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .flower-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="" alt="">
+  <div class="container">
+    <h1>Tus flores amarillas</h1>
+    <img src="gatito-flores.jpg" alt="Flores Amarillas" class="flower-image">
+    <div class="centrado">
+    <button onclick="showMessage()">Descubre tu mensaje</button>
+    </div>   
+        <p id="message" class="message">Quiero que sepas que, al igual que estas flores 
+            amarillas, siempre estaré aquí para ti, iluminando tus días más oscuros y 
+            celebrando tus momentos más brillantes. A veces la vida nos hace sentir 
+            como espectadores, pero quiero recordarte que tú eres la protagonista de 
+            tu propia historia, nunca te quedarás sin tus flores amarillas, ni sin el 
+            amor y el apoyo de quienes te rodean. Eres increíble, y mereces todo lo 
+            bonito que el mundo tiene para ofrecer.</p>    
+  </div>
+
+  <!-- Audio de fondo -->
+  <audio id="background-music" loop>
+    <source src="https://youtu.be/S7gMzYqXIZc?si=6cM3KazmSe6bcb42" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+
+  <script>
+    // Reproducir la música cuando se carga la página
+    window.addEventListener('load', function() {
+      var music = document.getElementById('background-music');
+      music.play().catch(function(error) {
+        // Algunos navegadores bloquean la reproducción automática
+        console.log("La reproducción automática está bloqueada: ", error);
+      });
+    });
+
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+
+</body>
+</html>
